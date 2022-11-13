@@ -1,16 +1,15 @@
-# import required modules and libraries for our analysis 
+#import required modules and libraries for our analysis
 import os
 import csv
-import pandas as pd
+
 
 #This function is responsible for loading data to memory
-
 df_header=[]
 data_set = []
+my_file = os.path.relpath("./CarPrice.csv")
 
-def loadDatatoMemory():
+def loadDataSetasCSV():
     try:
-        my_file = os.path.relpath("./CarPrice.csv")
         #get a collection of all data set columns and store in the list below
         with open(my_file,mode="r") as mydatafile:
             myopenfile = csv.reader(mydatafile)
@@ -20,6 +19,5 @@ def loadDatatoMemory():
                 data_set.append((items))
     except BaseException as error:
         print("The Following Error occured: {} ".format(error))
-
-loadDatatoMemory()
-
+loadDataSetasCSV() # calling this method is what populates the df_header and data_set list defined above
+#print(data_set)
