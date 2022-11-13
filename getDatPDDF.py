@@ -24,9 +24,10 @@ def getCarNames():
     car_names = getCarasPDDF()
     try:
         #get car names  from header variable from loaddata module
-        #return car_names.loc[car_names[df_header[1]]]
+        # Convert the columns data under car name from to string and then convert all records on the column to lower case
+        # This eliminate any record that is upper case or starts in upper case - validate that values on the CarName column are all lower case
         car_names[df_header[1]] = car_names[df_header[1]].str.lower()
-        return car_names.sort_values(df_header[1])
+        return car_names.sort_values(df_header[1]) # return the result of the manipulation
         #return car_names
     except BaseException as error:
         print("The following error occured: {}".format(error))
