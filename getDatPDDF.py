@@ -31,3 +31,21 @@ def getCarNames():
         #return car_names
     except BaseException as error:
         print("The following error occured: {}".format(error))
+
+
+def getChartVariables(): #3A
+
+    dataset = getCarasPDDF()
+    try:
+        fuel_system = dataset.groupby(by='fuelsystem')['car_ID'].count()
+        return pd.DataFrame(fuel_system).reset_index()
+    except BaseException as error:
+        print("The following error occured: {}".format(error))
+
+
+def getHorsePower(): #3B 
+    horse_power = getCarasPDDF()
+    try:
+        return horse_power.sort_values(by=df_header[16], ascending=True)
+    except BaseException as error:
+        print("The following error occured: {}".format(error ))
