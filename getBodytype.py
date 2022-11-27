@@ -12,3 +12,4 @@ def getUniqueBodyType():
         print("The following error has occured: {}".format(error))
 
 getUniqueBodyType()
+
