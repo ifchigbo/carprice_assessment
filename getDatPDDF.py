@@ -2,6 +2,7 @@
 import pandas as pd
 from loaddata import my_file
 from loaddata import df_header # call header columns
+import tui
 #method to get dataframes
 def getCarasPDDF():
     try:
