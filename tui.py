@@ -19,11 +19,15 @@ def programmenu():
     {"[6]":<10} List Summary of Sales for each Car Body
     {"[7]":<10} List Top 5 Selling Cars by Price
     {"[8]":<10} List Car Details by User Selection"
+    {"[9]":<10} Display BartChart and Subplot for Veehicle Fuel System and Horse Power of Top 5 Cars"
+    {"[10]":<10} Display Vehicle Purchases Decision Analysis"
     {"[0]":<10} Exit
 
     """)
+
     print("\n")
     myselection = int(input("Your selection is option: "))
+    print("\n")
     return myselection
 
 
