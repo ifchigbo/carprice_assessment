@@ -10,14 +10,12 @@ import tui
 # allows the user enter an int value to view cars under diffrent body type as was retrieved from getCarasPDDF function from the getDatPDDF module
 def getSalesSummary(cardataframe):
     car_body= sorted(getUniqueBodyType()) # create a list variable using the column data from the getBodytype module
-    #cardataframe=getCarasPDDF() # retrieve processed data frame from the getDatPDDF moudle
+    
     columns = getDataColumns() # creare list variable to hold the returned list from the getDatPDDF module
     
     try:
         # get input from the 
         #bodychoice = int(input("Enter 1 for {} \n, Enter 2 for {} \n, Enter 3 for {} \n, Enter 4 for {} \n, Enter 5 for {} \n".format(car_body[0],car_body[1],car_body[2],car_body[3],car_body[4])))
-        
-        
         try:
             #The if and elif blocks below does the following for total_1 to total_5
             # assigns the sum of sales per car body type to the variable total_1 to total_5
@@ -50,5 +48,4 @@ def getSalesSummary(cardataframe):
     except BaseException as error:
         print("The following error ocurred: {}".format(error))
 
-if __name__ =='__main__':
-    getSalesSummary()
+

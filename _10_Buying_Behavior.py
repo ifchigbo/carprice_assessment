@@ -18,7 +18,7 @@ def getAnalytics():
         x=barChartAnalysis['doornumber']
         y=barChartAnalysis['price']
         ####
-        
+
         fig,(ax1,ax2,ax3) = plt.subplots(3,1,figsize=(15, 20)) # creat a subplot with 2 rows and 1 column
         fig.tight_layout(pad=5.0)
         ax1.set(title="Highest Revenue Generated per Car body")
@@ -41,5 +41,3 @@ def getAnalytics():
     except BaseException as error:
         print("The following error has occurred: {}".format(error))
 
-if __name__ == '__main__':
-    getAnalytics()

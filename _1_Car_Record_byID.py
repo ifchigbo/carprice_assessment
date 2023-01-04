@@ -2,6 +2,8 @@ from loaddata import df_header, data_set
 from getDatPDDF import getCarasPDDF
 import pandas as pd
 from IPython import display
+
+
 #Get Car value by ID
 def getCarbyID():
     # I am using this check to keep track of  index in my records index
@@ -25,10 +27,6 @@ def displayCarDataQuerybyID():
         
         for ID,car_details in  dict(car_record).items():
            print("The {} of the car is: {}".format(ID,car_details)) #print the result in form of a text  statement
-           #result = {'Value':list(ID),'Keys':list(car_details)}
-        #display(pd.DataFrame(result))
     except BaseException as error:
         print("The following error occured: {}".format(error))
 
-if __name__ == "__main__":
-    displayCarDataQuerybyID() #display individual car details by ID method is called here -1 

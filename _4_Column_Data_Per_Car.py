@@ -8,12 +8,9 @@ dfcolumns = getDataColumns()
 
 def getSpecColumnsbyCarID(cardata):
     print("You can only enter a maximum of 5 columns")
-    print("Select the column you want to display for a given car ID")
+    print("Select the column you want to display for a given car ID, except the Car_ID column")
     print("\n")
-    #col_count = 0 - Editting started here
-    #while col_count < len(dfcolumns):
-    #    print("Enter option {} to see {} column in your feature set".format(col_count+1,dfcolumns[col_count] ))
-    #    col_count +=1
+   
     # your must enter a set of 5 numbers corresponding to the the column you are interested
     # in displaying for a given car ID
     try:
@@ -51,5 +48,4 @@ def getSpecColumnsbyCarID(cardata):
         print("\n")
         print("The following error has occured: {}".format(error))
 
-if __name__ == "__main__":
-    getSpecColumnsbyCarID()
+

@@ -14,13 +14,15 @@ def getSpecColumnsbyCarID(cardata):
         view_feature_list = [] # collect a set of features to view
         collected_feature_list = [] # get the column name of the selected features
         view_option = int(input("Please select 1 to see all details \n, Select 2 to see specific details \n"))
+        print("\n")
         if view_option == 1:
             display(cardata)
         elif view_option == 2:
             ###### List the feature avaialable from the column data set ####
             col_count = 0
             while col_count < len(dfcolumns):
-                print("Enter option {} to see {} column in your feature set".format(col_count+1,dfcolumns[col_count] ))
+                print("Enter option {} to see {} column in your feature set ".format(col_count+1,dfcolumns[col_count] ))
+                print("\n")
                 col_count +=1
             ###### end of code block for feature menu view #########
             truth_table = True #condition that enables the user enter as much features as possible
@@ -50,5 +52,4 @@ def getSpecColumnsbyCarID(cardata):
     except BaseException as error:
         print("The following error has occured: {}".format(error))
         
-if __name__ == "__main__":
-    getSpecColumnsbyCarID()
+

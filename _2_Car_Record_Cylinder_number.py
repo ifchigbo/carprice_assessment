@@ -3,7 +3,7 @@ from loaddata import df_header
 from IPython.display import display
 import tui
 
-#df = getCarasPDDF() # This variable assigns the value from the return value gotten from the getCarasPDDF function from the getDatPDDF module
+
 
 #below we define a function with parameter that takes cylinder as a paramter to get the number of cylinders a given car has
 # This function is called in the getCarbyCylinderNumber function below
@@ -29,12 +29,7 @@ def getCarbyCylinderNumber(df):
         
         if choice == 1:
             # The code below is a menu that enables the user view the Car cylinder options available in the data set
-            # -- Sunday 18th 
-            #for cylinders in range(len(unique_cylinder_numbers)):
-            #    print("Select option [ {} ]for cars with {} cylinders".format(unique_cylinder_numbers[cylinders],unique_cylinder_numbers[cylinders]))
-            # -- Sunday 18th end
-            # Enter the cylinder type you want to view
-            #cylinder_choice = int(input("Enter a cylinder number for cars under this category: "))
+            # Enter the cylinder type you want to view you make this call via the TUI module for car Cylinders
             while True:
                 cylinder_choice = tui.carCylinder()
                 # input validation used to verify that the user has entered a cylinder number within the range of cylinder numbers in
@@ -55,5 +50,3 @@ def getCarbyCylinderNumber(df):
     except BaseException as error:
         print("The following error occured {}".format(error))
 
-if __name__ == "__main__":
-    getCarbyCylinderNumber()

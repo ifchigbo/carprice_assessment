@@ -9,5 +9,4 @@ def sortCarbyAlph():
     except BaseException as error:
         print("The following error occured: {}".format(error))
 
-if __name__ == '__main__':        
-    print(sortCarbyAlph())
+

@@ -14,13 +14,8 @@ def getMostSellingCars(cardataset):
     unique_body_type = sorted(getUniqueBodyType()) # get the unique body type from the getBodyTypeModule
     
     try:
-        
-        # The section below enables the user select the car body from the menu selection below 
-        # The user will enter the body type of the car and its stored in the unique_bodychoice variable
-        #print("The following Body types are available {}".format(unique_body_type))
-        #unique_bodychoice = int(input("Enter 1 for {} \n, Enter 2 for {} \n, Enter 3 for {} \n, Enter 4 for {} \n, Enter 5 for {} \n".format(unique_body_type[0],unique_body_type[1],unique_body_type[2],unique_body_type[3],unique_body_type[4])))
-        
-        #The if, elif code block below , displays the top 5 sellling cars per body type based on the users input from the unique_bodychoice selction
+        # The section below enables the user select the car body from the menu selection below from the tui module
+        #The if, elif code block below the while statement, displays the top 5 sellling cars per body type based on the users input from the unique_bodychoice selction
         #The price_body variable is declared to hold the dataframe of the body type, based on the user's input above
         #The result of the processing - top selling cars is displayed based on sorting the dataframe by price (highest to lowest) of the 5 top selling cars
         #The process is repeated from options 1 - 5 that represents each body type
@@ -50,6 +45,5 @@ def getMostSellingCars(cardataset):
     except BaseException as error:
         print("The following error has occured: {}".format(error))
 
-if __name__ == '__main__':
-    getMostSellingCars()
+
     

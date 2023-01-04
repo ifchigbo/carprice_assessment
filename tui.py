@@ -26,13 +26,13 @@ def programmenu():
     """)
 
     print("\n")
-    myselection = int(input("Your selection is option: "))
+    myselection = int(input("Enter Your Option Selection : "))
     print("\n")
     return myselection
 
 
 def carBodyType():
-    #['convertible', 'hardtop', 'hatchback', 'sedan', 'wagon']
+
     print("\n")
     print(f"""Please select one of the following options to view details for a specific body type:
     {"[1]":<10} for Convertible
@@ -49,13 +49,13 @@ def carBodyType():
 def carCylinder():
     print("\n")
     print(f"""Please select one of the following options to view cars the listed Engine Cylinder types:
-    {"[1]":<10} 2 Cylinders
-    {"[2]":<10} 3 Cylinders
-    {"[3]":<10} 4 Cylinders
-    {"[4]":<10} 5 Cylinders
-    {"[5]":<10} 6 Cylinders
-    {"[6]":<10} 8 Cylinders
-    {"[7]":<10} 12 Cylinders
+    {"[2]":<10} 2 Cylinders
+    {"[3]":<10} 3 Cylinders
+    {"[4]":<10} 4 Cylinders
+    {"[5]":<10} 5 Cylinders
+    {"[6]":<10} 6 Cylinders
+    {"[8]":<10} 8 Cylinders
+    {"[12]":<10} 12 Cylinders
     {"[0]":<10} Quit
     """)
     print("\n")
@@ -64,7 +64,7 @@ def carCylinder():
 
 def uniqueColumnData():
     print("\n")
-    print(f"""Please select one of the following options to view cars the listed Engine Cylinder types:
+    print(f"""Please Select Columns to Display  :
     {"[1]":<10} Enter option 1 to see car_ID column in your feature set
     {"[2]":<10} Enter option 2 to see CarName column in your feature set
     {"[3]":<10} Enter option 3 to see fueltype column in your feature set
@@ -93,7 +93,7 @@ def uniqueColumnData():
     
 def uniqueColumnDataChoice():
     print("\n")
-    print(f"""Please select one of the following options to view cars the listed Engine Cylinder types:
+    print(f"""Please select Columns to Display :
     {"[1]":<10} Enter option 1 to see car_ID column in your feature set
     {"[2]":<10} Enter option 2 to see CarName column in your feature set
     {"[3]":<10} Enter option 3 to see fueltype column in your feature set
@@ -121,6 +121,7 @@ def uniqueColumnDataChoice():
     return column_options
 
 
-
-
+def errormessage():
+    print("Your option selection is invalid, please try again")
+    print("\n")
 

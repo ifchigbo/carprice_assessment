@@ -35,6 +35,5 @@ def getBarChart():
     except BaseException as error:
         print(error)
 
-if __name__ == "__main__":
-    getBarChart()
+
     
