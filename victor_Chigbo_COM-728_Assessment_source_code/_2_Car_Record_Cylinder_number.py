@@ -1,7 +1,6 @@
-from getDatPDDF import getCarasPDDF # import the data frame variable from the 
-from loaddata import df_header
-from IPython.display import display
 import tui
+from loaddata import df_header #import column records
+
 
 
 #below we define a function with parameter that takes cylinder as a paramter to get the number of cylinders a given car has
@@ -37,11 +36,13 @@ def getCarbyCylinderNumber(df):
                     break
                 elif cylinder_choice not in unique_cylinder_numbers: 
                     print("Your Selected option is invalid")
-                else:                
+                else:
                     pass
-                    #print(chooseCylindertoDisplay(df,cylinder_choice))
                     #display(chooseCylindertoDisplay(df,cylinder_choice))
-    
+                    print((chooseCylindertoDisplay(df,cylinder_choice))[[df_header[0],df_header[1],df_header[13],df_header[19]]])
+
+
+                     
         elif choice == 2:
             print("You have exited this menu\n")
             print("Thank you for testing my functionalities!")
